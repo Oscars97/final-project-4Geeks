@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/profile_form.scss";
+import oscarImageUrl from "../../img/oscar.jpg";
 
 const profile_form = () => {
 	const [name, setName] = useState("");
@@ -17,6 +18,11 @@ const profile_form = () => {
 	console.log(name, lastName, gitHub);
 	return (
 		<div className="form container">
+			<div className="text-center">
+				<img id="imagen" className="rounded-circle" src={oscarImageUrl} />
+			</div>
+			<br />
+
 			<div className="note">
 				<p>Connect4Devs</p>
 			</div>
@@ -60,11 +66,11 @@ const profile_form = () => {
 
 				<div className="col-md-12">
 					<div className="form-group input-group">
-						<input   
-							type="github" 
+						<input
+							type="github"
 							className="form-control"
 							id="floatingInput"
-							placeholder="GitHub" 
+							placeholder="GitHub"
 							onChange={e => setGitHub(e.target.value)}
 						/>
 
