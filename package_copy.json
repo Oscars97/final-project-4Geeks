@@ -39,7 +39,7 @@
 		"css-loader": "^2.1.1",
 		"dotenv-webpack": "^1.7.0",
 		"envfile": "^3.0.0",
-		"error-overlay-webpack-plugin": "^0.4.2",
+		"error-overlay-webpack-plugin": "^0.2.0",
 		"eslint": "^4.19.1",
 		"eslint-loader": "^2.0.0",
 		"eslint-plugin-react": "^7.7.0",
@@ -77,15 +77,11 @@
 	},
 	"dependencies": {
 		"bootstrap": "^4.3.1",
-		"chokidar": "^3.5.1",
 		"particles.js": "^2.0.0",
 		"prop-types": "^15.6.1",
 		"react": "^16.8.4",
 		"react-dom": "^16.8.4",
-		"react-particle-animation": "^1.0.1",
-		"react-particles-js": "^3.4.1",
 		"react-polyfills": "0.0.1",
-		"react-router-dom": "^5.2.0",
-		"react-tsparticles": "^1.19.3"
+		"react-router-dom": "^5.2.0"
 	}
 }
