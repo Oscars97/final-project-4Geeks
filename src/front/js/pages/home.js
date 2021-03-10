@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.scss";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
@@ -9,17 +10,9 @@ export const Home = () => {
 	return (
 		<div className="text-center mt-5">
 			<h1>Connect4Devs</h1>
-			<ul>
-				{store.users.map((item, i) => {
-					return (
-						<div className="users container" key={item.id}>
-							<h2>@{item.username}</h2>
-							<h2>{item.email}</h2>
-							<hr />
-						</div>
-					);
-				})}
-			</ul>
+			<Link to="/login">
+				<button>Login</button>
+			</Link>
 		</div>
 	);
 };
