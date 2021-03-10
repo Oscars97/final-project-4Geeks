@@ -2,31 +2,54 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 
 import { Context } from "../store/appContext";
+import logo from "../../img/R.png";
 
-import "../../styles/demo.scss";
+import "../../styles/login.scss";
 
 const Login = () => {
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
+
+	const handleSubmit = e => {
+		e.preventDefault();
+		console.log(email, password);
+	};
+
 	return (
-		<form>
-			<div className="form-group">
-				<label>Email address</label>
-				<input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-				<small id="emailHelp" className="form-text text-muted">
-					We ll never share your email with anyone else.
-				</small>
+		<div>
+			<div className="form container text-center">
+				<div className="tittle">
+					<img src={logo} />
+					<h1>Welcome!</h1>
+				</div>
+				<form onSubmit={e => handleSubmit(e)}>
+					<div className="form-group text-center">
+						<label>Email address</label>
+						<input
+							type="email"
+							className="form-control"
+							id="exampleInputEmail1"
+							aria-describedby="emailHelp"
+							placeholder="Add your e-mail here."
+							onChange={e => setEmail(e.target.value)}
+						/>
+					</div>
+					<div className="form-group text-center">
+						<label>Password</label>
+						<input
+							type="password"
+							className="form-control"
+							id="exampleInputPassword1"
+							placeholder="Add your password here."
+							onChange={e => setPassword(e.target.value)}
+						/>
+					</div>
+					<button type="submit" className="button_submit text-center btn-light">
+						LOGIN
+					</button>
+				</form>
 			</div>
-			<div className="form-group">
-				<label>Password</label>
-				<input type="password" className="form-control" id="exampleInputPassword1" />
-			</div>
-			<div className="form-group form-check">
-				<input type="checkbox" className="form-check-input" id="exampleCheck1" />
-				<label className="form-check-label">Check me out</label>
-			</div>
-			<button type="submit" className="btn btn-primary">
-				Submit
-			</button>
-		</form>
+		</div>
 	);
 };
 
