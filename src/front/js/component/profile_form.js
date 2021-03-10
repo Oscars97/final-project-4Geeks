@@ -15,11 +15,16 @@ const profile_form = () => {
 	const handleSubmit = e => {
 		e.preventDefault();
 	};
-	console.log(name, lastName, gitHub);
+	console.log(name, lastName, gitHub, aboutMe);
+	console.log(aboutMe.length);
 	return (
 		<div className="form container">
 			<div className="text-center">
-				<img id="imagen" className="rounded-circle" src={oscarImageUrl} />
+				<img
+					id="imagen"
+					className="rounded-circle"
+					src="https://avatars.githubusercontent.com/u/65253414?v=4"
+				/>
 			</div>
 			<br />
 
@@ -57,7 +62,13 @@ const profile_form = () => {
 					<div className="col-md-12">
 						<div className="form-group">
 							<div className="form-group">
-								<textarea className="form-control" id="exampleFormControlTextarea1" rows="3" />
+								<textarea
+									className="form-control"
+									id="exampleFormControlTextarea1"
+									rows="3"
+									onChange={e => setAboutMe(e.target.value)}
+								/>
+
 								<label htmlFor="floatingInput">About me</label>
 							</div>
 						</div>
@@ -111,7 +122,7 @@ const profile_form = () => {
 				</div>
 			</div>
 
-			<button className="w-100 btnRegister btn-lg btn-primary" type="submit" value="Register">
+			<button className="w-100 btnRegister btn-lg btn-light" type="submit" value="Register">
 				Submit
 			</button>
 		</div>
