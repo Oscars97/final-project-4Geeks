@@ -6,7 +6,7 @@ from api.models import db, User, Profile, Post
 from api.utils import generate_sitemap, APIException
 from werkzeug.security import generate_password_hash, check_password_hash       ## Nos permite manejar tokens por authentication (usuarios)    
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity   #from models import Person
-
+import datetime
 
 api = Blueprint('api', __name__)
 
