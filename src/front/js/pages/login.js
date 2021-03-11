@@ -12,7 +12,27 @@ const Login = () => {
 
 	const handleSubmit = e => {
 		e.preventDefault();
-		console.log(email, password);
+        console.log(email, password);
+        const data = { email: email, password: password };
+
+		fetch(process.env.BACKEND_URL + "/api/login", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json"
+			},
+			body: JSON.stringify(data)
+		})
+			.then(response => response.json())
+			.then(data => {
+				console.log("Success:", data);
+				sessionStorage.setItem("token", data.token);
+			
+				// setRedirect(true);
+				// actions.checkLogged();
+			})
+			.catch(error => {
+				console.error("Error:", error);
+			});
 	};
 
 	return (
