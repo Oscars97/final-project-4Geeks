@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+
+body{
+    background-color: rgb(4, 29, 46);
+}
+.form{
+    background-color: #2B3240;
+    padding: 5%;
+    width: 40%;
+    color: #CDC5D9;
+}
+.button_submit{
+    background-color: #CDC5D9;
+    color: #160626;
+    letter-spacing: 10px;
+    
+    &:hover{
+        background-color: #160626;
+    color: #CDC5D9;
+    }
+}
+.tittle{
+    font-family: 'DotGothic16', sans-serif;
+    color: #796C8C;
+}
+img{
+    width: 200px;
+    ;
+}

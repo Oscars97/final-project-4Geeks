@@ -5,11 +5,14 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./pages/home";
 import { Demo } from "./pages/demo";
 import { Single } from "./pages/single";
+import Login from "./pages/login.js";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import Profile from "./component/profile_form";
+// asi se importa
+import Register from "./pages/register.js";
 
 //create your first component
 const Layout = () => {
@@ -31,6 +34,13 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/single/:theid">
 							<Single />
+							{/* asi se crea una ruta */}
+						</Route>
+						<Route exact path="/register">
+							<Register />
+						</Route>
+						<Route exact path="/login">
+							<Login />
 						</Route>
 						<Route exact path="/profile_form">
 							<Profile />

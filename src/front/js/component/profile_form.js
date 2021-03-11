@@ -8,15 +8,44 @@ const profile_form = () => {
 	const [name, setName] = useState("");
 	const [lastName, setLastName] = useState("");
 	const [aboutMe, setAboutMe] = useState("");
-	const [gitHub, setGitHub] = useState("");
-	const [linkEdin, setLinkEdin] = useState("");
-	const [twiter, setTwiter] = useState("");
+	const [github, setGithub] = useState("");
+	const [linkedin, setLinkedin] = useState("");
+	const [twitter, setTwitter] = useState("");
 
 	const handleSubmit = e => {
 		e.preventDefault();
-		console.log(name, lastName, gitHub, aboutMe);
+
 		console.log(aboutMe.length);
+
+		const data = {
+			name: name,
+			last_name: lastName,
+			about_me: aboutMe,
+			github: github,
+			linkedin: linkedin,
+			twitter: twitter,
+			user_id: sessionStorage.getItem("id_user")
+		};
+		fetch(process.env.BACKEND_URL + "/api/profile", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json"
+			},
+			body: JSON.stringify(data)
+		})
+			.then(response => response.json())
+			.then(data => {
+				console.log("Success:", data);
+				setRedirect(true);
+			})
+			.catch(error => {
+				console.error("Error:", error);
+			});
+
+		// setRedirect(true);
 	};
+
+	// FETCH
 
 	return (
 		<div className="form container">
@@ -84,7 +113,7 @@ const profile_form = () => {
 								className="form-control"
 								id="floatingInput"
 								placeholder="GitHub"
-								onChange={e => setGitHub(e.target.value)}
+								onChange={e => setGithub(e.target.value)}
 							/>
 
 							<input
@@ -92,7 +121,7 @@ const profile_form = () => {
 								className="form-control"
 								id="floatingInput"
 								placeholder="Linkedin"
-								onChange={e => setLinkEdin(e.target.value)}
+								onChange={e => setLinkedin(e.target.value)}
 							/>
 
 							<input
@@ -100,7 +129,7 @@ const profile_form = () => {
 								className="form-control"
 								id="floatingInput"
 								placeholder="Twiter"
-								onChange={e => setTwiter(e.target.value)}
+								onChange={e => setTwitter(e.target.value)}
 							/>
 						</div>
 
