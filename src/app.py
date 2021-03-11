@@ -10,7 +10,11 @@ from api.utils import APIException, generate_sitemap
 from api.models import db
 from api.routes import api
 from api.admin import setup_admin
+<<<<<<< HEAD
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
+=======
+from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity 
+>>>>>>> 7eff90500ba2a269848e13b5b1ac7d9719278a9a
 #from models import Person
 
 ENV = os.getenv("FLASK_ENV")
@@ -18,7 +22,10 @@ static_file_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), '../
 app = Flask(__name__)
 app.url_map.strict_slashes = False
 jwt = JWTManager(app)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7eff90500ba2a269848e13b5b1ac7d9719278a9a
 
 # database condiguration
 if os.getenv("DATABASE_URL") is not None:

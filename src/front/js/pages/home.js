@@ -5,6 +5,8 @@ import image from "../../img/img-landing.png";
 import Particles from "react-tsparticles";
 import { Link } from "react-router-dom";
 
+import { Link } from "react-router-dom";
+
 export const Home = () => {
 	return (
 		<div className="container-fluid">
