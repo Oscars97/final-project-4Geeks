@@ -19,7 +19,6 @@ app = Flask(__name__)
 app.url_map.strict_slashes = False
 jwt = JWTManager(app)
 
-
 # database condiguration
 if os.getenv("DATABASE_URL") is not None:
     app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
