@@ -13,6 +13,7 @@ export const Home = () => {
 			<h1>Connect4Devs</h1>
 			<Link to="/login">
 				<button>Login</button>
+			</Link>
 
 			<Link to="/register">
 				<button>Register</button>

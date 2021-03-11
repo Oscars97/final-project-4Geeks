@@ -12,8 +12,8 @@ const Login = () => {
 
 	const handleSubmit = e => {
 		e.preventDefault();
-        console.log(email, password);
-        const data = { email: email, password: password };
+		console.log(email, password);
+		const data = { email: email, password: password };
 
 		fetch(process.env.BACKEND_URL + "/api/login", {
 			method: "POST",
@@ -26,7 +26,7 @@ const Login = () => {
 			.then(data => {
 				console.log("Success:", data);
 				sessionStorage.setItem("token", data.token);
-			
+
 				// setRedirect(true);
 				// actions.checkLogged();
 			})
