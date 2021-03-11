@@ -11,7 +11,6 @@ import datetime
 api = Blueprint('api', __name__)
 
 
-
 @api.route('/hello', methods=['POST', 'GET'])
 def handle_hello():
     users = User.query.all()
@@ -89,4 +88,3 @@ def register():
         "username": username
     }
     return jsonify(response), 200
-

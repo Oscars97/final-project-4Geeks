@@ -75,3 +75,4 @@ diagram.png
 __pycache__/
 migrations/
 ./migrations
+./migrations/*
