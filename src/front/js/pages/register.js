@@ -8,6 +8,22 @@ const Register = () => {
 	const handleSubmit = e => {
 		e.preventDefault();
 		console.log(email, username, password);
+
+		const data = { email: email, username: username, password: password };
+
+		fetch(process.env.BACKEND_URL + "/api/register", {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify(data)
+		})
+			.then(response => response.json())
+			.then(data => {
+				console.log("Success:", data);
+				// setRedirect(true);
+			})
+			.catch(error => {
+				console.error("Error:", error);
+			});
 	};
 
 	return (
