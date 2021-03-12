@@ -51,11 +51,7 @@ const profile_form = () => {
 		<div className="form container">
 			<form onSubmit={e => handleSubmit(e)}>
 				<div className="text-center">
-					<img
-						id="imagen"
-						className="rounded-circle"
-						src="https://avatars.githubusercontent.com/u/65253414?v=4"
-					/>
+					<img id="imagen" className="rounded-circle" src="https://picsum.photos/200" />
 				</div>
 				<br />
 
@@ -64,7 +60,7 @@ const profile_form = () => {
 				</div>
 				<br />
 				<div className="form-content container2">
-					<div className="row">
+					<div className="none">
 						<div className="col-md-12">
 							<div className="form-group">
 								<input
@@ -75,7 +71,7 @@ const profile_form = () => {
 									onChange={e => setName(e.target.value)}
 								/>
 
-								<label htmlFor="floatingInput">Name</label>
+								{/* <label htmlFor="floatingInput">Name</label> */}
 							</div>
 						</div>
 						<div className="col-md-12">
@@ -87,7 +83,7 @@ const profile_form = () => {
 									placeholder="Last Name"
 									onChange={e => setLastName(e.target.value)}
 								/>
-								<label htmlFor="floatingInput">Last Name</label>
+								{/* <label htmlFor="floatingInput">Last Name</label> */}
 							</div>
 						</div>
 						<div className="col-md-12">
@@ -100,7 +96,7 @@ const profile_form = () => {
 										onChange={e => setAboutMe(e.target.value)}
 									/>
 
-									<label htmlFor="floatingInput">About me</label>
+									{/* <label htmlFor="floatingInput">About me</label> */}
 								</div>
 							</div>
 						</div>
@@ -134,7 +130,7 @@ const profile_form = () => {
 						</div>
 
 						<div className="row g-2">
-							<div className="col-md">
+							{/* <div className="col-md">
 								<div className="form-floating">
 									<label htmlFor="floatingInput">GitHub</label>
 								</div>
@@ -148,7 +144,7 @@ const profile_form = () => {
 								<div className="form-floating">
 									<label htmlFor="floatingInput">Twiter</label>
 								</div>
-							</div>
+							</div> */}
 						</div>
 					</div>
 				</div>

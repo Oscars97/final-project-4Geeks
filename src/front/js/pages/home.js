@@ -4,8 +4,6 @@ import "../../styles/landing.scss";
 import image from "../../img/img-landing.png";
 import Particles from "react-tsparticles";
 import { Link } from "react-router-dom";
-
-import { Link } from "react-router-dom";
 import "../../styles/home.scss";
 import Profile from "../component/profile_form.js";
 
@@ -105,13 +103,11 @@ export const Home = () => {
 							REGISTER
 						</button>
 					</Link>
-					<div className="button">
-						<Link to="/login">
-							<button type="button" className="btn btn-outline-light btn-block btn-login">
-								LOG IN
-							</button>
-						</Link>
-					</div>
+					<Link to="/login">
+						<button type="button" className="btn btn-outline-light btn-block btn-login">
+							LOG IN
+						</button>
+					</Link>
 				</div>
 				<div className="col-6 second-column">
 					<img src={image} />
