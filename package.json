@@ -85,6 +85,8 @@
 		"react-particles-js": "^3.4.1",
 		"react-polyfills": "0.0.1",
 		"react-router-dom": "^5.2.0",
-		"react-tsparticles": "^1.19.3"
+		"react-tsparticles": "^1.19.3",
+		"sweetalert2": "^10.15.5",
+		"sweetalert2-react-content": "^3.3.1"
 	}
 }

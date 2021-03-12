@@ -36,7 +36,8 @@ const profile_form = () => {
 			.then(response => response.json())
 			.then(data => {
 				console.log("Success:", data);
-				setRedirect(true);
+				// setRedirect(true);
+				alert("SUCCESS");
 			})
 			.catch(error => {
 				console.error("Error:", error);
