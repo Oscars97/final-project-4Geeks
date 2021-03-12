@@ -1,15 +1,13 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link, Redirect } from "react-router-dom";
-
 import { Context } from "../store/appContext";
 import logo from "../../img/R.png";
-
 import "../../styles/login.scss";
 
 const Login = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
-	const [redirect, setRedirect] = usetate(false);
+	const [redirect, setRedirect] = useState(false);
 	const handleSubmit = e => {
 		e.preventDefault();
 		console.log(email, password);
@@ -26,7 +24,7 @@ const Login = () => {
 			.then(data => {
 				console.log("Success:", data);
 				sessionStorage.setItem("token", data.token);
-
+				sessionStorage.setItem("id_user", data.userId);
 				setRedirect(true);
 				// actions.checkLogged();
 			})
@@ -69,6 +67,7 @@ const Login = () => {
 					</button>
 				</form>
 			</div>
+			{redirect ? <Redirect to="/profile_form" /> : ""}
 		</div>
 	);
 };

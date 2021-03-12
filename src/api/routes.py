@@ -9,7 +9,7 @@ from flask_jwt_extended import JWTManager, create_access_token, jwt_required, ge
 import datetime
 
 api = Blueprint('api', __name__)
-
+#jwt = JWTManager(api)
 
 @api.route('/hello', methods=['POST', 'GET'])
 def handle_hello():
@@ -86,5 +86,52 @@ def register():
     response = {
         "msg": "Added successfully",
         "username": username
+    }
+    return jsonify(response), 200
+
+@api.route('/profile', methods=['POST'])
+def register_profile():
+ if request.method == 'POST':
+    name = request.json.get("name", None)
+    last_name = request.json.get("last_name", None)
+    about_me = request.json.get("about_me", None)
+    github = request.json.get("github", None)
+    linkedin = request.json.get("linkedin", None)
+    twitter = request.json.get("twitter", None)
+    user_id = request.json.get("user_id", None)
+    
+    if not name:
+        return "Email required", 401
+    username = request.json.get("username", None)
+    if not last_name:
+        return "Username required", 401
+    password = request.json.get("password", None)
+    if not about_me:
+        return "Password required", 401
+    
+    if not github:
+        return "Password required", 401
+
+    # email_query = User.query.filter_by(user_id=user_id).first()
+    # if email_query:
+    #     return "This email has been already taken", 401
+    
+    profile = Profile()
+    profile.name = name
+    profile.last_name=last_name
+    profile.twitter=twitter
+    profile.github=github
+    profile.linkedin=linkedin
+    profile.user_id=user_id
+    profile.about_me=about_me
+
+
+    
+    db.session.add(profile)
+    db.session.commit()
+
+    response = {
+        "msg": "Added successfully",
+        "github": github
     }
     return jsonify(response), 200

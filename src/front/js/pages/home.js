@@ -4,6 +4,8 @@ import "../../styles/landing.scss";
 import image from "../../img/img-landing.png";
 import Particles from "react-tsparticles";
 import { Link } from "react-router-dom";
+import "../../styles/home.scss";
+import Profile from "../component/profile_form.js";
 
 export const Home = () => {
 	return (
