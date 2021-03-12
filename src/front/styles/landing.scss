@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(4, 29, 46);
+    color: white;
+}
+
+nav{
+    button{
+        height: 50px;
+        
+        color: white;
+    }
+    h1{
+        font-family: 'DotGothic16', sans-serif;
+        font-size: 3.5em;
+        color: white;
+
+        
+    }
+}
+
+.container-fluid{
+    position: relative;
+}
+.row{
+    position: absolute;
+    top: 2%;
+    left: 10%;
+}
+.first-column{
+    padding: 3%;
+    padding-bottom: 0;
+    background-color: rgba(83, 7, 7, 0.151);
+    margin-top: 12%;
+    text-align: center;
+    h1{
+        font-family: 'DotGothic16', sans-serif;
+        font-size:4em;
+        animation-name: changingColor;
+        animation-duration: 4s;
+        animation-delay: 2s;
+        animation-iteration-count: 2;
+    }
+    .btn-register{
+        height: 50px;
+        background-color: black;
+        color: white;
+        letter-spacing: 10px;
+        margin-top: 10%;
+        margin-bottom: 5%;
+
+        &:hover{
+            -webkit-box-shadow: 5px 2px 16px -3px rgba(255,255,255,1);
+            -moz-box-shadow: 5px 2px 16px -3px rgba(255,255,255,1);
+            box-shadow: 5px 2px 16px -3px rgba(255,255,255,1);
+        }
+    }
+    .btn-login{
+        height: 50px;
+        letter-spacing: 10px;
+
+        &:hover{
+            background-color: rgba(0, 0, 0, 0);
+            color: white;
+            -webkit-box-shadow: 5px 2px 16px -3px rgba(255,255,255,1);
+-moz-box-shadow: 5px 2px 16px -3px rgba(255,255,255,1);
+box-shadow: 5px 2px 16px -3px rgba(255,255,255,1);
+        }
+    }
+}
+.second-column{
+    img{
+       
+        &:hover{
+            
+        }
+    }
+}
+
+@keyframes changingColor{
+    0%{
+        color: white;
+    }
+    15%{
+        color: rgb(217, 255, 0);
+    }
+    25%{
+        color: red;
+    }
+    30%{
+        color: rgb(134, 18, 145);
+    }
+    50%{
+        color: yellow;
+    }
+    65%{
+        color: rgba(255, 0, 234, 0.966);
+    }
+    75%{
+        color: green;
+    }
+    90%{
+        color: rgb(4, 248, 236);
+    }
+    100%{
+        color: white;
+    }
+}

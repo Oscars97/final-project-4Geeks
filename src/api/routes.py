@@ -11,7 +11,6 @@ import datetime
 api = Blueprint('api', __name__)
 #jwt = JWTManager(api)
 
-
 @api.route('/hello', methods=['POST', 'GET'])
 def handle_hello():
     users = User.query.all()
