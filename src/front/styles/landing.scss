@@ -6,6 +6,7 @@
 body{
     background-color: rgb(4, 29, 46);
     color: white;
+    animation: rounding 2s;
 }
 
 nav{
@@ -28,8 +29,8 @@ nav{
 }
 .row{
     position: absolute;
-    top: 2%;
-    left: 10%;
+    top: 10%;
+    left: 15%;
 }
 .first-column{
     padding: 3%;
@@ -37,6 +38,7 @@ nav{
     background-color: rgba(83, 7, 7, 0.151);
     margin-top: 12%;
     text-align: center;
+    width: 100%;
     h1{
         font-family: 'DotGothic16', sans-serif;
         font-size:4em;
@@ -74,7 +76,7 @@ box-shadow: 5px 2px 16px -3px rgba(255,255,255,1);
 }
 .second-column{
     img{
-       
+        width: 100%;
         &:hover{
             
         }
@@ -110,3 +112,4 @@ box-shadow: 5px 2px 16px -3px rgba(255,255,255,1);
         color: white;
     }
 }
+
