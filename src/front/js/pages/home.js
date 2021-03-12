@@ -6,6 +6,8 @@ import Particles from "react-tsparticles";
 import { Link } from "react-router-dom";
 
 import { Link } from "react-router-dom";
+import "../../styles/home.scss";
+import Profile from "../component/profile_form.js";
 
 export const Home = () => {
 	return (

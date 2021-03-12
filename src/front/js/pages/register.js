@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "../../styles/register.scss";
-
+import { Redirect } from "react-router-dom";
 const Register = () => {
 	const [email, setEmail] = useState("");
 	const [username, setUserName] = useState("");
 	const [password, setPassword] = useState("");
+	const [redirect, setRedirect] = useState(false);
 	const handleSubmit = e => {
 		e.preventDefault();
 		console.log(email, username, password);
@@ -19,6 +20,7 @@ const Register = () => {
 			.then(response => response.json())
 			.then(data => {
 				console.log("Success:", data);
+				setRedirect(true);
 				// setRedirect(true);
 			})
 			.catch(error => {
@@ -63,6 +65,7 @@ const Register = () => {
 					</button>
 				</form>
 			</div>
+			{redirect ? <Redirect to="/login" /> : ""}
 		</div>
 	);
 };
