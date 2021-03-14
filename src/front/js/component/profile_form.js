@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import "../../styles/profile_form.scss";
 import oscarImageUrl from "../../img/oscar.jpg";
 
@@ -11,11 +11,11 @@ const profile_form = () => {
 	const [github, setGithub] = useState("");
 	const [linkedin, setLinkedin] = useState("");
 	const [twitter, setTwitter] = useState("");
-
+	const [redirect, setRedirect] = useState(false);
 	const handleSubmit = e => {
 		e.preventDefault();
 
-		console.log(aboutMe.length);
+		//console.log(aboutMe.length);
 
 		const data = {
 			name: name,
@@ -154,6 +154,7 @@ const profile_form = () => {
 					Submit
 				</button>
 			</form>
+			{redirect ? <Redirect to="/profile" /> : ""}
 		</div>
 	);
 };
