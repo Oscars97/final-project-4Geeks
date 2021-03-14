@@ -103,7 +103,7 @@ ul li:hover span {
   z-index: 1000;
   transition: .3s;
   color: #fff;
-  box-shadw: -1px 1px 1px rgba(0, 0, 0, .5);
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, .5);
 }
 ul li:hover span:nth-child(5){
   transform: translate(40px, -40px);
@@ -135,4 +135,8 @@ ul li:nth-child(3):hover span{
 }
 ul li:nth-child(4):hover span{
   background: blue !important;
+}
+
+h1{
+    color :goldenrod;
 }
