@@ -39,7 +39,7 @@ const Profile = () => {
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="https://twitter.com/nicesocksbb" target="_blank" rel="noopener noreferrer">
 								<span />
 								<span />
 								<span />
@@ -48,7 +48,7 @@ const Profile = () => {
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="https://github.com/Oscars97" target="_blank" rel="noopener noreferrer">
 								<span />
 								<span />
 								<span />
@@ -57,7 +57,7 @@ const Profile = () => {
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="https://www.linkedin.com/in/oscars97/" target="_blank" rel="noopener noreferrer">
 								<span />
 								<span />
 								<span />
