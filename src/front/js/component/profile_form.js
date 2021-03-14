@@ -94,6 +94,7 @@ const profile_form = () => {
 										className="form-control"
 										id="exampleFormControlTextarea1"
 										rows="3"
+										placeholder="About Me"
 										onChange={e => setAboutMe(e.target.value)}
 									/>
 
