@@ -5,7 +5,7 @@ import "../../styles/profile.scss";
 
 const Profile = () => {
 	return (
-		<div clasName="container">
+		<div clasName="container2">
 			<div className="text-center">
 				<img id="imagen" className="rounded-circle" src="https://picsum.photos/200" />
 			</div>
