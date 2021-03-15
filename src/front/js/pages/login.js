@@ -69,7 +69,7 @@ const Login = () => {
 				</form>
 			</div>
 			{redirect ? <Redirect to="/profile_form" /> : null}
-			{profile ? <Redirect to="/" /> : null}
+			{profile ? <Redirect to="/perfil" /> : null}
 		</div>
 	);
 };

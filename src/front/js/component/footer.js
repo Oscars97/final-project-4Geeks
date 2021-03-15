@@ -7,7 +7,7 @@ export const Footer = () => (
 			Collaborators:
 			<a href="https://github.com/Oscars97"> Oscar, </a>
 			<a href="https://github.com/Angiegeek">Angie, </a>
-			<a href="https://github.com/AdriBejarano">Adriana, </a>
+			<a href="https://github.com/AdriBejarano">Adri, </a>
 			<a href="https://github.com/IsmaelArtavia">Ismael </a>
 		</p>
 		<p>

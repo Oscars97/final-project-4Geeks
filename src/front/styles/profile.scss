@@ -1,0 +1,126 @@
+html,
+body {
+ height: 100%;
+}
+
+.container2{
+  padding: 10px;
+  border-radius: 25px;
+}
+
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+* {
+  padding: 0px;
+  margin: 0px;
+}
+.jumbotron{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 50vh;
+   background: rgb(4, 29, 46);
+   width: 40%;
+   height: 40%;
+  border-radius: 60%;
+  margin: 2% auto;}
+
+
+.jumbotron ul {
+   position: relative;
+   display: flex;
+   transform: rotate(0deg) skew(25deg);
+   transform-style: preserve-3d;
+   
+
+}
+.jumbotron ul li {
+  position: relative;
+  list-style: none;
+  width: 60px;
+  height: 60px;
+  margin: 10% 20px 0 20px;
+  
+}
+.jumbotron ul li:before{
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: -5px;
+  width: 100%;
+  height: 10px;
+  background: #2a2a2a;
+  transform-origin: top;
+  transform: skewX(-41deg);
+}
+.jumbotron ul li:after{
+  content: '';
+  position: absolute;
+  top:5px;
+  left: -9px;
+  width: 9px;
+  height: 100%;
+  background: #2a2a2a;
+  transform-origin: right;
+  transform: skewY(-49deg);
+}
+.jumbotron ul li span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex !important;
+  background: #2a2a2a;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 30px !important;
+  transition: 1.5s ease-out;
+}
+.jumbotron ul li:hover span {
+  z-index: 1000;
+  transition: .3s;
+  color: #fff;
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, .5);
+}
+.jumbotron ul li:hover span:nth-child(5){
+  transform: translate(40px, -40px);
+  opacity: 1;
+}
+.jumbotron ul li:hover span:nth-child(4){
+  transform: translate(30px, -30px);
+  opacity: .8;
+}
+.jumbotron ul li:hover span:nth-child(3){
+  transform: translate(20px, -20px);
+  opacity: .6;
+}
+.jumbotron ul li:hover span:nth-child(2){
+  transform: translate(10px, -10px);
+  opacity: .4;
+}
+.jumbotron ul li:hover span:nth-child(1){
+  transform: translate(0px, 0px);
+  opacity: .2;
+}
+.jumbotron ul li:nth-child(1):hover span{
+  background: gray !important;
+}
+ ul li:nth-child(2):hover span{
+  background: #1DA1F2 !important;
+}
+.jumbotron ul li:nth-child(3):hover span{
+  background: black !important;
+}
+.jumbotron ul li:nth-child(4):hover span{
+background: #0e76a8 !important;
+}
+
+h1{
+    color :goldenrod;
+}
+
+.btnprofile{
+    color:gold;
+    border-radius: 15%;
+}

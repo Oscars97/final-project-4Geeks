@@ -76,16 +76,17 @@
 		]
 	},
 	"dependencies": {
-		"bootstrap": "^4.3.1",
+		"bootstrap": "^4.6.0",
 		"chokidar": "^3.5.1",
 		"prop-types": "^15.6.1",
-		"react": "^16.8.4",
-		"react-dom": "^16.8.4",
+		"react": "^16.14.0",
+		"react-dom": "^16.14.0",
 		"react-particle-animation": "^1.0.1",
 		"react-particles-js": "^3.4.1",
 		"react-polyfills": "0.0.1",
 		"react-router-dom": "^5.2.0",
 		"react-tsparticles": "^1.19.3",
+		"reactstrap": "^8.9.0",
 		"sweetalert2": "^10.15.5",
 		"sweetalert2-react-content": "^3.3.1"
 	}

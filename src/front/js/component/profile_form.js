@@ -1,8 +1,10 @@
 import React from "react";
 import { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import "../../styles/profile_form.scss";
 import oscarImageUrl from "../../img/oscar.jpg";
+import { Alert } from "reactstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const profile_form = () => {
 	const [name, setName] = useState("");
@@ -11,11 +13,12 @@ const profile_form = () => {
 	const [github, setGithub] = useState("");
 	const [linkedin, setLinkedin] = useState("");
 	const [twitter, setTwitter] = useState("");
+	const [redirect, setRedirect] = useState(false);
 
 	const handleSubmit = e => {
 		e.preventDefault();
 
-		console.log(aboutMe.length);
+		//console.log(aboutMe.length);
 
 		const data = {
 			name: name,
@@ -94,6 +97,7 @@ const profile_form = () => {
 										className="form-control"
 										id="exampleFormControlTextarea1"
 										rows="3"
+										placeholder="About Me"
 										onChange={e => setAboutMe(e.target.value)}
 									/>
 
@@ -106,6 +110,9 @@ const profile_form = () => {
 					<div className="col-md-12">
 						<div className="form-group input-group">
 							<input
+								onClick={() => {
+									alert("You just have to add the last part, example: oscars97");
+								}}
 								type="github"
 								className="form-control"
 								id="floatingInput"
@@ -114,6 +121,9 @@ const profile_form = () => {
 							/>
 
 							<input
+								onClick={() => {
+									alert("You just have to add the last part, example: oscars97");
+								}}
 								type="linkedin"
 								className="form-control"
 								id="floatingInput"
@@ -122,6 +132,9 @@ const profile_form = () => {
 							/>
 
 							<input
+								onClick={() => {
+									alert("You just have to add the last part, example: oscars97");
+								}}
 								type="twiter"
 								className="form-control"
 								id="floatingInput"
@@ -153,6 +166,7 @@ const profile_form = () => {
 				<button className="w-100 btnRegister btn-lg btn-light" type="submit" value="Register">
 					Submit
 				</button>
+				{redirect ? <Redirect to="/profile" /> : ""}
 			</form>
 		</div>
 	);
