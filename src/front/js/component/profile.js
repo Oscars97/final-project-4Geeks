@@ -4,6 +4,8 @@ import { Link, Redirect } from "react-router-dom";
 import "../../styles/profile.scss";
 
 const Profile = () => {
+	const [name, setName] = useState("");
+
 	return (
 		<div clasName="container2">
 			<div className="text-center">
@@ -15,11 +17,11 @@ const Profile = () => {
 				<p className="lead">User Name Last Name</p>
 				<hr className="my-4" />
 				<p>About me, Description about user from database</p>
-				<a className="btn btn-primary btn-lg" href="#" role="button">
+
+				<a className="btnprofile btn-primary btn-lg" href="#" role="button">
 					go to Post
 				</a>
-				<br></br>
-				<br></br>
+
 				<br></br>
 				<br></br>
 				<div>

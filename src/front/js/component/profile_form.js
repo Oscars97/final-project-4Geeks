@@ -12,6 +12,7 @@ const profile_form = () => {
 	const [linkedin, setLinkedin] = useState("");
 	const [twitter, setTwitter] = useState("");
 	const [redirect, setRedirect] = useState(false);
+
 	const handleSubmit = e => {
 		e.preventDefault();
 
@@ -154,8 +155,8 @@ const profile_form = () => {
 				<button className="w-100 btnRegister btn-lg btn-light" type="submit" value="Register">
 					Submit
 				</button>
+				{redirect ? <Redirect to="/profile" /> : ""}
 			</form>
-			{redirect ? <Redirect to="/profile" /> : ""}
 		</div>
 	);
 };
