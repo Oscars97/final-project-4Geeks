@@ -42,12 +42,18 @@ def login():
 
     expiracion = datetime.timedelta(days=3)
     access_token = create_access_token(identity=user.email, expires_delta=expiracion)
-
+    # user_profile = Profile.query.filter_by(user_id==user.id).first()
+    profile = Profile.query.filter_by(user_id=user.id).first()
+    if profile == None:
+        profile_status = profile
+    if profile != None:
+        profile_status = profile.serialize()
     data = {
             "user": user.serialize(),
             "token": access_token,
             "expires": expiracion.total_seconds()*1000,
-            "userId": user.id
+            "userId": user.id,
+            "profile_status": profile_status
         }
 
 
@@ -124,7 +130,7 @@ def register_profile():
     profile.linkedin=linkedin
     profile.user_id=user_id
     profile.about_me=about_me
-
+    profile.status = True
 
     
     db.session.add(profile)

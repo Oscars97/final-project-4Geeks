@@ -8,11 +8,11 @@ const Login = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [redirect, setRedirect] = useState(false);
+	const [profile, setProfile] = useState(false);
 	const handleSubmit = e => {
 		e.preventDefault();
 		console.log(email, password);
 		const data = { email: email, password: password };
-
 		fetch(process.env.BACKEND_URL + "/api/login", {
 			method: "POST",
 			headers: {
@@ -25,7 +25,8 @@ const Login = () => {
 				console.log("Success:", data);
 				sessionStorage.setItem("token", data.token);
 				sessionStorage.setItem("id_user", data.userId);
-				setRedirect(true);
+				data.profile_status === null ? setRedirect(true) : setProfile(true);
+
 				// actions.checkLogged();
 			})
 			.catch(error => {
@@ -67,7 +68,8 @@ const Login = () => {
 					</button>
 				</form>
 			</div>
-			{redirect ? <Redirect to="/profile_form" /> : ""}
+			{redirect ? <Redirect to="/profile_form" /> : null}
+			{profile ? <Redirect to="/" /> : null}
 		</div>
 	);
 };
