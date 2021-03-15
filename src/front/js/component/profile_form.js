@@ -3,6 +3,8 @@ import { useState, useEffect, useContext } from "react";
 import { Link, Redirect } from "react-router-dom";
 import "../../styles/profile_form.scss";
 import oscarImageUrl from "../../img/oscar.jpg";
+import { Alert } from "reactstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const profile_form = () => {
 	const [name, setName] = useState("");
@@ -108,6 +110,9 @@ const profile_form = () => {
 					<div className="col-md-12">
 						<div className="form-group input-group">
 							<input
+								onClick={() => {
+									alert("You just have to add the last part, example: oscars97");
+								}}
 								type="github"
 								className="form-control"
 								id="floatingInput"
@@ -116,6 +121,9 @@ const profile_form = () => {
 							/>
 
 							<input
+								onClick={() => {
+									alert("You just have to add the last part, example: oscars97");
+								}}
 								type="linkedin"
 								className="form-control"
 								id="floatingInput"
@@ -124,6 +132,9 @@ const profile_form = () => {
 							/>
 
 							<input
+								onClick={() => {
+									alert("You just have to add the last part, example: oscars97");
+								}}
 								type="twiter"
 								className="form-control"
 								id="floatingInput"
