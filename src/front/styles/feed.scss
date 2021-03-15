@@ -1,13 +1,37 @@
 .sidebar{
-    background-color: gray;
+    background-color: white;
     margin: 5px;
+    height: 500px;
 }
 .post{
-    background-color: pink;
+    background-color: white;
     margin: 5px;
-    
-}
+    }
 .advertisement{
-    background-color: gray;
-    margin: 5px
+    background-color:white;
+    margin: 5px;
+}
+.btn-profile{
+    margin: 10% 35%;
+}
+.form-container{
+    width: 100%;
+    padding-top: 8%;
+    text-align: center;
+    input{
+        border-radius: 25px;
+        width: 100%;
+        height: 80px;
+        margin-bottom: 2%;
+        text-align: center;
+    }
+    button{
+        border-radius: 25px;
+        background-image: linear-gradient(to right, #00ffff, #000000)
+
+        
+    }
+    button:hover{
+        box-shadow: #000000a9 2px 2px;
+    }
 }

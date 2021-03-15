@@ -11,6 +11,7 @@ import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import Profile from "./component/profile_form";
+import ProfileUser from "./component/perfil";
 // asi se importa
 import Register from "./pages/register.js";
 import Feed from "./pages/feed";
@@ -48,6 +49,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/feed">
 							<Feed />
+						</Route>
+						<Route exact path="/perfil">
+							<ProfileUser />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>
