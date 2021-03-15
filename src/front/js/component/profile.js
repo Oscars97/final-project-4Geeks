@@ -5,6 +5,26 @@ import { Context } from "../store/appContext";
 import "../../styles/profile.scss";
 
 const Profile = () => {
+	fetch(process.env.BACKEND_URL + "/api/profile", {
+		method: "GET",
+		headers: {
+			"Content-Type": "application/json",
+			Authorization: "Bearer" + sessionStorage.getItem("token")
+		}
+		//body: JSON.stringify(data)
+	})
+		.then(response => response.json())
+		.then(data => {
+			console.log("Success:", data);
+			sessionStorage.setItem("token", data.token);
+			sessionStorage.setItem("id_user", data.userId);
+			//setRedirect(true);
+			// actions.checkLogged();
+		})
+		.catch(error => {
+			console.error("Error:", error);
+		});
+
 	return (
 		<div clasName="container2">
 			<div className="text-center">

@@ -135,3 +135,17 @@ def register_profile():
         "github": github
     }
     return jsonify(response), 200
+
+
+################################# get para obtener los datos guardados en profile
+@api.route('/profile', methods=['GET'])
+def profile():
+    if request.method == 'GET':
+
+     user_id=Profile.user_id
+    #user1 = Profile.query.get(user_id)         
+    #results= list(map(lambda x:x.serialize(),user1))
+     
+      
+    #return jsonify(results), 200
+     return jsonify( {"id del usuario": user_id }  ), 200
