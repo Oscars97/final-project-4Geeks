@@ -1,11 +1,10 @@
 import React from "react";
 import { useState, useEffect, useContext } from "react";
 import { Link, Redirect } from "react-router-dom";
+import { Context } from "../store/appContext";
 import "../../styles/profile.scss";
 
 const Profile = () => {
-	const [name, setName] = useState("");
-
 	return (
 		<div clasName="container2">
 			<div className="text-center">
@@ -24,6 +23,8 @@ const Profile = () => {
 
 				<br></br>
 				<br></br>
+				<br></br>
+
 				<div>
 					<ul>
 						<li>
