@@ -14,12 +14,13 @@ body {
   margin: 0px;
 }
 .jumbotron{
-   display: flex; 
+   display: flex;
    align-items: center;
    justify-content: center;
    min-height: 50vh;
    background: rgb(4, 29, 46);
    width: 50%;
+   margin: 2% auto;
    height: 50%;
   border-radius: 50%;
 }
@@ -124,4 +125,3 @@ h1{
     color:gold;
     border-radius: 15%;
 }
-
