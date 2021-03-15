@@ -11,7 +11,7 @@ import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import Profile from "./component/profile_form";
-import ProfileUser from "./component/profile";
+import ProfileUser from "./component/perfil";
 // asi se importa
 import Register from "./pages/register.js";
 
@@ -46,7 +46,7 @@ const Layout = () => {
 						<Route exact path="/profile_form">
 							<Profile />
 						</Route>
-						<Route exact path="/profile">
+						<Route exact path="/perfil">
 							<ProfileUser />
 						</Route>
 						<Route>

@@ -138,14 +138,9 @@ def register_profile():
 
 
 ################################# get para obtener los datos guardados en profile
-@api.route('/profile', methods=['GET'])
-def profile():
+@api.route('/profile/<int:user_id>', methods=['GET'])
+def traer_datos(user_id):
     if request.method == 'GET':
-
-     user_id=Profile.user_id
-    #user1 = Profile.query.get(user_id)         
-    #results= list(map(lambda x:x.serialize(),user1))
-     
-      
-    #return jsonify(results), 200
-     return jsonify( {"id del usuario": user_id }  ), 200
+        profile_query = Profile.query.filter_by(user_id=user_id).first()
+        print(profile_query)
+        return jsonify( {"user": profile_query.serialize() }  ), 200

@@ -1,10 +1,9 @@
 html,
 body {
-  height: 100%;
+ height: 100%;
 }
 
 .container2{
-      
   padding: 10px;
   border-radius: 25px;
 }
@@ -14,24 +13,26 @@ body {
   padding: 0px;
   margin: 0px;
 }
-body{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background: #00071C;
+.jumbotron{
+   display: flex; 
+   align-items: center;
+   justify-content: center;
+   min-height: 50vh;
+   background: rgb(4, 29, 46);
+   width: 50%;
+   height: 50%;
+  border-radius: 50%;
 }
 
-.jumbotron{
-    border-radius: 15%;
-    width: 100%;
-    height: 60%;
-}
- .jumbotron ul {
+
+.jumbotron ul {
    position: relative;
    display: flex;
    transform: rotate(0deg) skew(25deg);
    transform-style: preserve-3d;
+   
+   
+   
    
 }
 .jumbotron ul li {
@@ -39,7 +40,7 @@ body{
   list-style: none;
   width: 60px;
   height: 60px;
-  margin: 0px 20px;
+  margin: 10% 20px 0 20px;
   
 }
 .jumbotron ul li:before{
@@ -107,14 +108,14 @@ body{
 .jumbotron ul li:nth-child(1):hover span{
   background: gray !important;
 }
-.jumbotron ul li:nth-child(2):hover span{
+ ul li:nth-child(2):hover span{
   background: #1DA1F2 !important;
 }
 .jumbotron ul li:nth-child(3):hover span{
   background: black !important;
 }
 .jumbotron ul li:nth-child(4):hover span{
-  background: #0e76a8 !important;
+background: #0e76a8 !important;
 }
 
 h1{
@@ -125,3 +126,4 @@ h1{
     color:gold;
     border-radius: 15%;
 }
+
