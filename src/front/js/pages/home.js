@@ -9,7 +9,7 @@ import Profile from "../component/profile_form.js";
 
 export const Home = () => {
 	return (
-		<div className="container-fluid">
+		<div className="container-fluid landing-body">
 			<Particles
 				id="tsparticles"
 				options={{
@@ -91,7 +91,7 @@ export const Home = () => {
 					detectRetina: true
 				}}
 			/>
-			<div className="row">
+			<div className="row main-container">
 				<div className="col-6 first-column">
 					<h5>A World wide place where developers meet!</h5>
 					<h1>
