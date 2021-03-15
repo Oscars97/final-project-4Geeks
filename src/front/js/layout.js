@@ -13,6 +13,7 @@ import { Footer } from "./component/footer";
 import Profile from "./component/profile_form";
 // asi se importa
 import Register from "./pages/register.js";
+import Feed from "./pages/feed";
 
 //create your first component
 const Layout = () => {
@@ -44,6 +45,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/profile_form">
 							<Profile />
+						</Route>
+						<Route exact path="/feed">
+							<Feed />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>
