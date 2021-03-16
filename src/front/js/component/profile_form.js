@@ -37,8 +37,9 @@ const profile_form = () => {
 			.then(response => response.json())
 			.then(data => {
 				console.log("Success:", data);
-				// setRedirect(true);
+
 				alert("SUCCESS");
+				setRedirect(true);
 			})
 			.catch(error => {
 				console.error("Error:", error);
@@ -164,7 +165,7 @@ const profile_form = () => {
 				<button className="w-100 btnRegister btn-lg btn-light" type="submit" value="Register">
 					Submit
 				</button>
-				{redirect ? <Redirect to="/profile" /> : ""}
+				{redirect ? <Redirect to="/perfil" /> : ""}
 			</form>
 		</div>
 	);

@@ -6,13 +6,46 @@
 .post{
     background-color: white;
     margin: 5px;
+  
+        .posts-list{
+            color: black;
+            overflow-y: scroll;
+            max-height: 46vh;
+        }
     }
 .advertisement{
     background-color:white;
     margin: 5px;
+    position: relative;
+    .advertisement-top{
+
+        img{
+            width: 100%;
+        }
+    }
 }
-.btn-profile{
-    margin: 10% 35%;
+.top{
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border-bottom: solid black 5px;
+
+    div{
+        margin: 3%;
+    }
+}
+.bottom{
+    margin-top: 2%;
+    background-color: black;
+    border: solid 2px black;
+    height: 55vh;
+
+    .user{
+        text-align: center;
+        color: white;
+        background-image: linear-gradient(to right, #00ffff, #000000);
+        margin: 2% auto;
+    }
 }
 .form-container{
     width: 100%;
