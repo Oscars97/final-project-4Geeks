@@ -23,13 +23,17 @@ const Feed = () => {
 			.then(response => response.json())
 			.then(data => {
 				console.log("Success:", data);
+				alert("POSTED");
 			})
 			.catch(error => {
 				console.error("Error:", error);
 			});
 	};
 	return (
-		<div className="container">
+		<div className="container-fluid ml-5">
+			<h1 className="big-title">
+				<strong>Connect4Devs</strong>
+			</h1>
 			<div className="row">
 				<div className="sidebar col-3">
 					<div className="top">
@@ -62,7 +66,7 @@ const Feed = () => {
 						</div>
 					</div>
 				</div>
-				<div className="post col-5">
+				<div className="post col-8">
 					<div className="form-container">
 						<form
 							onSubmit={e => {
@@ -95,14 +99,14 @@ const Feed = () => {
 				</div>
 
 				<hr />
-				<div className="advertisement col-3">
-					{/* <div className="advertisement-top">
-						<img className="img-example" src={advertisement} />
-						<p>Advertisement</p>
-					</div> */}
-					{/* <div className="advertisement-bottom">Add your advertisement</div> */}
-					<h1>Hola</h1>
-				</div>
+				{/* <div className="advertisement col-3">
+					<div className="advertisement-top">
+						<h1>Hi</h1>
+					</div>
+					<div className="advertisement-bottom">
+						<h1>How are you?</h1>
+					</div>
+				</div> */}
 			</div>
 		</div>
 	);

@@ -77,7 +77,7 @@ const Profile = () => {
 								</li>
 								<li>
 									<a
-										href={`https://linkedin.com/${info_user.linkedin}`}
+										href={`https://linkedin.com/in/${info_user.linkedin}`}
 										target="_blank"
 										rel="noopener noreferrer">
 										<span />

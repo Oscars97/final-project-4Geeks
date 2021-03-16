@@ -1,12 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+.big-title
+{   
+    text-align: center;
+    font-family: 'DotGothic16', sans-serif;
+    font-size:4em;
+    
+}
 .sidebar{
     background-color: white;
-    margin: 5px;
-    height: 500px;
+    // margin: 5px;
+    margin-right: 2%;
+    height: 528px;
 }
 .post{
     background-color: white;
-    margin: 5px;
-  
+    // margin-left: 1%;
+    height: 528px;
         .posts-list{
             color: black;
             overflow-y: scroll;
@@ -16,20 +25,17 @@
 .advertisement{
     background-color:white;
     margin: 5px;
-    position: relative;
-    .advertisement-top{
-
-        img{
-            width: 100%;
-        }
-    }
+    height: 528px;
+    color: black;
 }
 .top{
     text-align: center;
     padding-top: 5%;
     padding-bottom: 5%;
     border-bottom: solid black 5px;
-
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     div{
         margin: 3%;
     }
@@ -38,7 +44,7 @@
     margin-top: 2%;
     background-color: black;
     border: solid 2px black;
-    height: 55vh;
+    height: 64vh;
 
     .user{
         text-align: center;

@@ -137,7 +137,7 @@ const profile_form = () => {
 								type="twiter"
 								className="form-control"
 								id="floatingInput"
-								placeholder="Twiter"
+								placeholder="Twitter"
 								onChange={e => setTwitter(e.target.value)}
 							/>
 						</div>
