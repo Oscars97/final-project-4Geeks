@@ -36,8 +36,8 @@ def getPosts():
 @api.route('/login', methods=['POST'])
 def login():
     
-    email = request.json.get("email")
-    password = request.json.get("password")
+    email = request.json.get("email", None)
+    password = request.json.get("password", None)
 
     if not email:
         return jsonify({"msg":"Email required"}), 400
@@ -47,9 +47,14 @@ def login():
     
     user = User.query.filter_by(email=email).first()
     if not user:
-        return jsonify({"msg": "The email is not correct"}), 401
+        return jsonify({"msg": "The email is not correct",
+        "status": 401
+        
+        }), 401
     if not check_password_hash(user.password, password):
-         return jsonify({"msg": "The password is not correct"}), 401
+         return jsonify({"msg": "The password is not correct",
+        "status": 401
+        }), 400
 
     expiracion = datetime.timedelta(days=3)
     access_token = create_access_token(identity=user.email, expires_delta=expiracion)
