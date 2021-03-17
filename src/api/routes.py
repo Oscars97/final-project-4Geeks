@@ -22,6 +22,17 @@ def handle_hello():
     return jsonify(response_body), 200
 
 
+@api.route('/posts', methods=['GET'])
+def getPosts():
+    posts = Post.query.all()
+    posts = list(map(lambda x: x.serialize(), posts))
+    response_body = {
+        "posts": posts
+    }
+
+    return jsonify(response_body), 200
+
+
 @api.route('/login', methods=['POST'])
 def login():
     
@@ -58,6 +69,32 @@ def login():
 
 
     return jsonify(data), 200
+
+@api.route('/new-post', methods=['POST'])
+def addPost():
+    
+    content = request.json.get("content")
+    user_id = request.json.get("user_id")
+
+    if not content:
+        return jsonify({"msg":"Content required"}), 400
+    
+    post = Post()
+    post.content = content
+    post.user_id = user_id
+    db.session.add(post)
+    db.session.commit()
+
+    data = {
+            "success": "Added",
+            "post_id": post.id
+        }
+
+
+    return jsonify(data), 200
+
+
+
 
 @api.route('/register', methods=['POST'])
 def register():

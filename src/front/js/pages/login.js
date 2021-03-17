@@ -26,7 +26,6 @@ const Login = () => {
 				sessionStorage.setItem("token", data.token);
 				sessionStorage.setItem("id_user", data.userId);
 				data.profile_status === null ? setRedirect(true) : setProfile(true);
-
 				// actions.checkLogged();
 			})
 			.catch(error => {

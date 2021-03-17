@@ -41,13 +41,15 @@ const Profile = () => {
 						<div className="container-fluid">
 							<ul>
 								<li>
-									<a href="#">
-										<span />
-										<span />
-										<span />
-										<span />
-										<span className="fa fa-comment" />
-									</a>
+									<Link to="/feed">
+										<button href="#">
+											<span />
+											<span />
+											<span />
+											<span />
+											<span className="fa fa-comment" />
+										</button>
+									</Link>
 								</li>
 								<li>
 									<a
@@ -75,7 +77,7 @@ const Profile = () => {
 								</li>
 								<li>
 									<a
-										href={`https://linkedin.com/${info_user.linkedin}`}
+										href={`https://linkedin.com/in/${info_user.linkedin}`}
 										target="_blank"
 										rel="noopener noreferrer">
 										<span />

@@ -14,6 +14,7 @@ import Profile from "./component/profile_form";
 import ProfileUser from "./component/perfil";
 // asi se importa
 import Register from "./pages/register.js";
+import Feed from "./pages/feed";
 
 //create your first component
 const Layout = () => {
@@ -45,6 +46,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/profile_form">
 							<Profile />
+						</Route>
+						<Route exact path="/feed">
+							<Feed />
 						</Route>
 						<Route exact path="/perfil">
 							<ProfileUser />

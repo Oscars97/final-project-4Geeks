@@ -3,8 +3,6 @@ import { useState, useEffect, useContext } from "react";
 import { Link, Redirect } from "react-router-dom";
 import "../../styles/profile_form.scss";
 import oscarImageUrl from "../../img/oscar.jpg";
-import { Alert } from "reactstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 const profile_form = () => {
 	const [name, setName] = useState("");
@@ -39,8 +37,9 @@ const profile_form = () => {
 			.then(response => response.json())
 			.then(data => {
 				console.log("Success:", data);
-				// setRedirect(true);
+
 				alert("SUCCESS");
+				setRedirect(true);
 			})
 			.catch(error => {
 				console.error("Error:", error);
@@ -138,7 +137,7 @@ const profile_form = () => {
 								type="twiter"
 								className="form-control"
 								id="floatingInput"
-								placeholder="Twiter"
+								placeholder="Twitter"
 								onChange={e => setTwitter(e.target.value)}
 							/>
 						</div>
@@ -166,7 +165,7 @@ const profile_form = () => {
 				<button className="w-100 btnRegister btn-lg btn-light" type="submit" value="Register">
 					Submit
 				</button>
-				{redirect ? <Redirect to="/profile" /> : ""}
+				{redirect ? <Redirect to="/perfil" /> : ""}
 			</form>
 		</div>
 	);
