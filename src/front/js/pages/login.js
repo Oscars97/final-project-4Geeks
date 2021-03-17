@@ -23,13 +23,18 @@ const Login = () => {
 			.then(response => response.json())
 			.then(data => {
 				console.log("Success:", data);
-				sessionStorage.setItem("token", data.token);
-				sessionStorage.setItem("id_user", data.userId);
-				data.profile_status === null ? setRedirect(true) : setProfile(true);
+				if (data.status === 401) {
+					data.profile_status === null ? setRedirect(false) : setProfile(false);
+				} else {
+					sessionStorage.setItem("token", data.token);
+					sessionStorage.setItem("id_user", data.userId);
+					data.profile_status === null ? setRedirect(true) : setProfile(true);
+				}
 				// actions.checkLogged();
 			})
 			.catch(error => {
 				console.error("Error:", error);
+				data.profile_status === null ? setRedirect(false) : setProfile(false);
 			});
 	};
 
