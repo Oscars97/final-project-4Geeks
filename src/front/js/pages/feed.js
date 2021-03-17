@@ -26,7 +26,6 @@ const Feed = () => {
 			.then(response => response.json())
 			.then(data => {
 				console.log("Success:", data);
-				alert("POSTED");
 				sessionStorage.setItem("username", data.user);
 				window.location.reload();
 			})

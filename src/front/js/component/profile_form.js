@@ -120,9 +120,7 @@ const profile_form = () => {
 							/>
 
 							<input
-								onClick={() => {
-									alert("You just have to add the last part, example: oscars97");
-								}}
+								
 								type="linkedin"
 								className="form-control"
 								id="floatingInput"
@@ -131,9 +129,7 @@ const profile_form = () => {
 							/>
 
 							<input
-								onClick={() => {
-									alert("You just have to add the last part, example: oscars97");
-								}}
+								
 								type="twiter"
 								className="form-control"
 								id="floatingInput"
