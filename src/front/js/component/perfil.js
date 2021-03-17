@@ -126,6 +126,9 @@ const Profile = () => {
 					<p>Bio: {infoGithub.bio}</p>
 				</div>
 				<div className="github-repositories">
+					<h1 className="big-title">
+						<strong>Repositories</strong>
+					</h1>
 					<ul>
 						{repositories.map((item, i) => {
 							return (

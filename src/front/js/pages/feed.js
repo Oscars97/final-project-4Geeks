@@ -9,6 +9,9 @@ const Feed = () => {
 	const sortedPosts = store.posts.reverse();
 	const createNewPost = e => {
 		e.preventDefault();
+		if (content === "") {
+			return alert("The post cant be empty");
+		}
 		const data = {
 			content: content,
 			user_id: sessionStorage.getItem("id_user")
@@ -24,6 +27,8 @@ const Feed = () => {
 			.then(data => {
 				console.log("Success:", data);
 				alert("POSTED");
+				sessionStorage.setItem("username", data.user);
+				window.location.reload();
 			})
 			.catch(error => {
 				console.error("Error:", error);
@@ -58,7 +63,7 @@ const Feed = () => {
 								{store.users.map((item, i) => {
 									return (
 										<div className="user" key={item.id}>
-											<h5>{item.username}</h5>
+											<h5>@{item.username}</h5>
 										</div>
 									);
 								})}
@@ -90,6 +95,13 @@ const Feed = () => {
 								return (
 									<div className="unique-post" key={item.id}>
 										<h5>{item.content}</h5>
+										{store.users.map((element, i) => {
+											return (
+												<p key={i}>
+													{element.id === item.user_id ? "@" + element.username : null}
+												</p>
+											);
+										})}
 										<hr className="my-4" />
 									</div>
 								);

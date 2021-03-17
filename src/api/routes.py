@@ -64,6 +64,7 @@ def login():
             "token": access_token,
             "expires": expiracion.total_seconds()*1000,
             "userId": user.id,
+            "username": user.username,
             "profile_status": profile_status
         }
 
@@ -75,7 +76,8 @@ def addPost():
     
     content = request.json.get("content")
     user_id = request.json.get("user_id")
-
+    user = User.query.get(user_id)
+    
     if not content:
         return jsonify({"msg":"Content required"}), 400
     
@@ -86,6 +88,7 @@ def addPost():
     db.session.commit()
 
     data = {
+            "user": user.username,
             "success": "Added",
             "post_id": post.id
         }
