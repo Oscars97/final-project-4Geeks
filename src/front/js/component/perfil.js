@@ -8,21 +8,49 @@ const Profile = () => {
 	const user_id = sessionStorage.getItem("id_user");
 	console.log(user_id);
 	const [info_user, setInfoUser] = useState({});
+	const [infoGithub, setInfoGithub] = useState({});
+	const [repositories, setRepositories] = useState([]);
+	let github_profile;
 	useEffect(() => {
 		fetch(process.env.BACKEND_URL + `/api/profile/${user_id}`)
 			.then(response => response.json())
 			.then(data => {
 				setInfoUser(data.user);
+				getGithubInfo(data.user.github);
+				getRepositories(data.user.github);
 			})
 			.catch(error => {
 				console.error("Error:", error);
 			});
+
+		const getGithubInfo = username => {
+			fetch(`https://api.github.com/users/${username}`)
+				.then(response => response.json())
+				.then(data => {
+					console.log(data);
+					setInfoGithub(data);
+				})
+				.catch(error => {
+					console.error("Error:", error);
+				});
+		};
+		const getRepositories = username => {
+			fetch(`https://api.github.com/users/${username}/repos?sort=created&per_page=10`)
+				.then(response => response.json())
+				.then(data => {
+					console.log(data);
+					setRepositories(data);
+				})
+				.catch(error => {
+					console.error("Error:", error);
+				});
+		};
 	}, []);
 
 	return (
 		<div className="container-fluid">
 			<div className="text-center">
-				<img id="imagen" className="rounded-circle" src="https://picsum.photos/200" />
+				<img id="imagen" className="rounded-circle" src={infoGithub.avatar_url} />
 
 				<div className="jumbotron">
 					<div className="text-center">
@@ -90,6 +118,26 @@ const Profile = () => {
 							</ul>
 						</div>
 					</div>
+				</div>
+				<div className="github-info">
+					<h1>Information from Github</h1>
+					<p>Username: {infoGithub.login}</p>
+					<p>Name: {infoGithub.name}</p>
+					<p>Bio: {infoGithub.bio}</p>
+				</div>
+				<div className="github-repositories">
+					<ul>
+						{repositories.map((item, i) => {
+							return (
+								<div key={i} className="repository">
+									<h5>Project name: {item.name}</h5>
+									<a target="_blank" rel="noopener noreferrer" href={item.html_url}>
+										Click here!
+									</a>
+								</div>
+							);
+						})}
+					</ul>
 				</div>
 			</div>
 		</div>

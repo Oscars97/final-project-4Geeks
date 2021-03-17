@@ -124,3 +124,34 @@ h1{
     color:gold;
     border-radius: 15%;
 }
+.github-info{
+    border: solid 2px white;
+    padding: 2%;
+}
+.github-repositories{
+    margin-top: 3%;
+
+    .repository{
+        
+        border: solid 2px white;
+        width: 50%;
+        margin: 0 auto;
+
+        h5{
+            font-style: italic;
+        }
+        a{
+            color: white;
+            cursor: pointer;
+        }
+
+        &:hover{
+            background-color: #fff;
+            color: black;
+
+            a{
+                color: red;
+            }
+        }
+    }
+}
