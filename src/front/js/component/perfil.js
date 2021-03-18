@@ -48,19 +48,21 @@ const Profile = () => {
 	}, []);
 
 	return (
-		<div className="container-fluid">
+		<div className="container">
 			<div className="text-center">
-				<img id="imagen" className="rounded-circle" src={infoGithub.avatar_url} />
+				<div className="div-img-user">
+					<img id="" className="img-user" src={infoGithub.avatar_url} />
+				</div>
 
 				<div className="jumbotron">
 					<div className="text-center">
-						<h1 className="display-4">Hello</h1>
-						<p className="lead">
+						<h1 className="display-4">Welcome,</h1>
+						<h2 className="lead">
 							{info_user.name} {info_user.last_name}
-						</p>
+						</h2>
 
 						<hr className="my-4" />
-						<p>{info_user.about_me}</p>
+						<h3>{info_user.about_me}</h3>
 
 						{/* <a className="btnprofile btn-primary btn-lg" href="#" role="button">
 							go to Post

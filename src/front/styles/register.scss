@@ -1,9 +1,19 @@
 body {background-color: black;}
 
-.register-form {background-color:rgb(4, 29, 46);
+.register-form {background: linear-gradient(150deg,#1E4A53,#1C3B4F,#BCE8E6);
     margin-top: 10%;
     padding: 2%;
     color:white;
     width: 45%;
+    animation: BgGradient 5s ease infinite;
 }
-
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+@keyframes BgGradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}   
+}

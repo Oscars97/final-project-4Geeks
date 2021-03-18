@@ -1,3 +1,9 @@
+.profile-form{
+    background: linear-gradient(150deg,#1E4A53,#1C3B4F,#BCE8E6);
+    padding: 1%;
+    margin: 1% auto;
+    border-radius: 2%;
+}
 .note
 {
     text-align: center;
@@ -5,7 +11,7 @@
     background: -webkit-linear-gradient(left, #627fa1, #969090);
     color: #fff;
     font-weight: bold;
-    line-height: 80px;
+    line-height: 40px;
 }
 .form-content
 {
@@ -16,19 +22,22 @@
 .form-control{
     border-radius:1.5rem;
 }
-.btnSubmit
-{
-    border:none;
-    border-radius:1.5rem;
-    padding: 1%;
-    width: 20%;
-    cursor: pointer;
-    background: #0062cc;
-    color: #fff;
-}
+// .btnSubmit
+// {   
+//     border:none;
+//     border-radius:1.5rem;
+//     padding: 1%;
+//     width: 20%;
+//     cursor: pointer;
+//     background: #0062cc;
+//     color: #fff;
+//     letter-spacing: 2px;
+// }
 
 .btnRegister{
-        border:none;
+    
+    letter-spacing: 2px;
+    border:none;
     border-radius:1.5rem;
     padding: 1%;
     width: 20%;
@@ -38,8 +47,7 @@
 }
 
 .container2{
-      
-  padding: 10px;
+//   padding: 1%;
   border-radius: 25px;
 }
 
@@ -75,8 +83,7 @@ body{
     background: black;
 }
 
-.imagen{
- 
-  width: 10%;
-  height: 10%;
+#imagen{
+  width: 20%;
+  height: 20%;
 }

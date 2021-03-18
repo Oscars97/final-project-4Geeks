@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect, useContext } from "react";
 import { Link, Redirect } from "react-router-dom";
 import "../../styles/profile_form.scss";
-import oscarImageUrl from "../../img/oscar.jpg";
+import logo from "../../img/logo10.png";
 
 const profile_form = () => {
 	const [name, setName] = useState("");
@@ -12,6 +12,7 @@ const profile_form = () => {
 	const [linkedin, setLinkedin] = useState("");
 	const [twitter, setTwitter] = useState("");
 	const [redirect, setRedirect] = useState(false);
+	
 
 	const handleSubmit = e => {
 		e.preventDefault();
@@ -51,16 +52,17 @@ const profile_form = () => {
 	// FETCH
 
 	return (
-		<div className="form container">
+		<div className="profile-form container">
+			
 			<form onSubmit={e => handleSubmit(e)}>
 				<div className="text-center">
-					<img id="imagen" className="rounded-circle" src="https://picsum.photos/200" />
+					<img id="imagen" className="" src={logo} />
 				</div>
 				<br />
 
-				<div className="note">
+				{/* <div className="note">
 					<p>Connect4Devs</p>
-				</div>
+				</div> */}
 				<br />
 				<div className="form-content container2">
 					<div className="none">
@@ -108,28 +110,24 @@ const profile_form = () => {
 
 					<div className="col-md-12">
 						<div className="form-group input-group">
+							<label>@</label>
 							<input
-								onClick={() => {
-									alert("You just have to add the last part, example: oscars97");
-								}}
 								type="github"
 								className="form-control"
 								id="floatingInput"
 								placeholder="GitHub"
 								onChange={e => setGithub(e.target.value)}
 							/>
-
+							<label>@</label>
 							<input
-								
 								type="linkedin"
 								className="form-control"
 								id="floatingInput"
 								placeholder="Linkedin"
 								onChange={e => setLinkedin(e.target.value)}
 							/>
-
+							<label>@</label>
 							<input
-								
 								type="twiter"
 								className="form-control"
 								id="floatingInput"
@@ -159,7 +157,7 @@ const profile_form = () => {
 				</div>
 
 				<button className="w-100 btnRegister btn-lg btn-light" type="submit" value="Register">
-					Submit
+					SUBMIT
 				</button>
 				{redirect ? <Redirect to="/perfil" /> : ""}
 			</form>
