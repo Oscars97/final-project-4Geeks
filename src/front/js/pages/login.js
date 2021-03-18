@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { Context } from "../store/appContext";
-import logo from "../../img/logo1-removebg-preview.png";
+import logo from "../../img/logo10.png";
 import "../../styles/login.scss";
 
 const Login = () => {
@@ -40,11 +40,11 @@ const Login = () => {
 
 	return (
 		<div>
-			<div className="form container text-center">
+			<div className="div-form-login container text-center">
 				<div className="tittle">
-					<img src={logo} />
+					<img className="logo-connect4devs" src={logo} />
 				</div>
-				<form onSubmit={e => handleSubmit(e)}>
+				<form className="login-form" onSubmit={e => handleSubmit(e)}>
 					<div className="form-group text-center">
 						<label className="email">Email address</label>
 						<input

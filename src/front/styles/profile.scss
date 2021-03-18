@@ -18,11 +18,12 @@ body {
    align-items: center;
    justify-content: center;
    min-height: 50vh;
-   background: rgb(4, 29, 46);
-   width: 40%;
-   height: 40%;
-  border-radius: 60%;
-  margin: 2% auto;}
+//    background: rgb(4, 29, 46);
+   background: linear-gradient(150deg,#1E4A53,#1C3B4F,#BCE8E6);
+   width: 100%;
+   height: 30%;
+//   border-radius: 60%;
+  margin: 0.5% auto;}
 
 
 .jumbotron ul {
@@ -116,7 +117,7 @@ body {
 background: #0e76a8 !important;
 }
 
-h1{
+h1, h2, h3{
     color :goldenrod;
 }
 
@@ -129,8 +130,7 @@ h1{
     padding: 2%;
 }
 .github-repositories{
-    margin-top: 3%;
-
+    background: linear-gradient(150deg,#1E4A53,#1C3B4F,#BCE8E6);
     .repository{
         
         border: solid 2px white;
@@ -153,5 +153,16 @@ h1{
                 color: red;
             }
         }
+    }
+}
+.div-img-user{
+    width: 20%;
+    height: 15%;
+    border-radius: 50%;
+    margin: 0 auto;
+
+    .img-user{
+        height: 200px;
+        border-radius: 50%;
     }
 }
