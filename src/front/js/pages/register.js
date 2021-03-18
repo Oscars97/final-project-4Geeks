@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../../styles/register.scss";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 const Register = () => {
 	const [email, setEmail] = useState("");
 	const [username, setUserName] = useState("");
@@ -25,6 +25,7 @@ const Register = () => {
 			})
 			.catch(error => {
 				console.error("Error:", error);
+				alert("User with that email already exits");
 			});
 	};
 
@@ -60,9 +61,20 @@ const Register = () => {
 							onChange={e => setPassword(e.target.value)}
 						/>
 					</div>
-					<button type="submit" className="button_submit btn text-center btn-light">
-						Sign Up
-					</button>
+					<div className="buttons">
+						<div>
+							<button type="submit" className="button_submit btn text-center btn-light">
+								Sign Up
+							</button>
+						</div>
+						<div>
+							<Link to="/login">
+								<button type="button" className="btn btn-outline-dark btn-profile">
+									Login
+								</button>
+							</Link>
+						</div>
+					</div>
 				</form>
 			</div>
 			{redirect ? <Redirect to="/login" /> : ""}

@@ -12,6 +12,7 @@ const profile_form = () => {
 	const [linkedin, setLinkedin] = useState("");
 	const [twitter, setTwitter] = useState("");
 	const [redirect, setRedirect] = useState(false);
+	
 
 	const handleSubmit = e => {
 		e.preventDefault();
@@ -52,6 +53,7 @@ const profile_form = () => {
 
 	return (
 		<div className="profile-form container">
+			
 			<form onSubmit={e => handleSubmit(e)}>
 				<div className="text-center">
 					<img id="imagen" className="" src={logo} />
@@ -108,17 +110,15 @@ const profile_form = () => {
 
 					<div className="col-md-12">
 						<div className="form-group input-group">
+							<label>@</label>
 							<input
-								onClick={() => {
-									alert("You just have to add the last part, example: oscars97");
-								}}
 								type="github"
 								className="form-control"
 								id="floatingInput"
 								placeholder="GitHub"
 								onChange={e => setGithub(e.target.value)}
 							/>
-
+							<label>@</label>
 							<input
 								type="linkedin"
 								className="form-control"
@@ -126,7 +126,7 @@ const profile_form = () => {
 								placeholder="Linkedin"
 								onChange={e => setLinkedin(e.target.value)}
 							/>
-
+							<label>@</label>
 							<input
 								type="twiter"
 								className="form-control"

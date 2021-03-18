@@ -25,6 +25,7 @@ const Login = () => {
 				console.log("Success:", data);
 				if (data.status === 401) {
 					data.profile_status === null ? setRedirect(false) : setProfile(false);
+					alert("Email and password incorrect");
 				} else {
 					sessionStorage.setItem("token", data.token);
 					sessionStorage.setItem("id_user", data.userId);
