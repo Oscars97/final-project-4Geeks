@@ -3,9 +3,10 @@
 
 body{
     background-color: rgb(4, 29, 46);
+    margin: 0;
+    padding: 0;
 }
 .form{
-    
     padding: 5%;
     width: 40%;
     height: 550px;
@@ -15,41 +16,58 @@ body{
     background: linear-gradient(150deg, #BCE8E6,#1E4A53,#1C3B4F);
     background-size: 400% 300%;
     animation: BgGradient 5s ease infinite;
+    font-size: 19px;
 }
-
 @keyframes BgGradient {
     0% {background-position: 0% 50%;}
     50% {background-position: 100% 50%;}
     1000% {background-position: 0% 50%;}   
 }
-.button_submit{
+.btn-submit{
+    position: relative;
+    display: inline-block;
     font-family: 'DotGothic16', sans-serif;
-    background-color: #1C3B4F;
-    border-radius: 50%;
+    background-color: #7CD2D9;
+    height: 50px;
     color: #160626;
-    letter-spacing: 10px;
-    padding: 15px;
-    
+    letter-spacing: 4px;
+    padding: 15px 30px;
+    font-size: 15px;
+    overflow: hidden;
+    transition: 0.2s;
     &:hover{
-        background-color: #204459;
-    color: #CDC5D9;
+        background-color: #7CD2D9;
+        box-shadow: 0 0 10px #7CD2D9, 0 0 40px #7CD2D9, 0 0 80px #7CD2D9;
+        transition-delay: 0.1s;
     }
 }
-.tittle{
-    font-family: 'DotGothic16', sans-serif;
-    color: #796C8C;
+.btn-submit span{
+    position: absolute;
+    display: block;
+}
+#span1{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#049DBF);
+}
+.btn-submit:hover #span1{
+    left: 100%;
+    transition: 1s;
 }
 img{
-    width: 200px;
-    ;
+    width: 250px;
+    height: 175px;
+    padding-top: 2px;
 }
 .email{
-    font-family: 'DotGothic16', sans-serif;
+    //font-family: 'DotGothic16', sans-serif;
     color: #BCE8E6;
     
 }
 .pass{
-   font-family: 'DotGothic16', sans-serif;
+  // font-family: 'DotGothic16', sans-serif;
     color: #BCE8E6;
     
 }

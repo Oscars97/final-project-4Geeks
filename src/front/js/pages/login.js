@@ -38,7 +38,6 @@ const Login = () => {
 			<div className="form container text-center">
 				<div className="tittle">
 					<img src={logo} />
-					<h2>Welcome!</h2>
 				</div>
 				<form onSubmit={e => handleSubmit(e)}>
 					<div className="form-group text-center">
@@ -62,7 +61,11 @@ const Login = () => {
 							onChange={e => setPassword(e.target.value)}
 						/>
 					</div>
-					<button type="submit" className="button_submit text-center btn-light">
+					<button type="submit" className="btn-neon btn-submit  text-center btn-light">
+						<span id="span1"></span>
+						<span id="span2"></span>
+						<span id="span3"></span>
+						<span id="span4"></span>
 						LOGIN
 					</button>
 				</form>
