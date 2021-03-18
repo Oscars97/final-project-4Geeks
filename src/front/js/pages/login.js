@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { Context } from "../store/appContext";
-import logo from "../../img/R.png";
+import logo from "../../img/logo1-removebg-preview.png";
 import "../../styles/login.scss";
 
 const Login = () => {
@@ -38,11 +38,11 @@ const Login = () => {
 			<div className="form container text-center">
 				<div className="tittle">
 					<img src={logo} />
-					<h1>Welcome!</h1>
+					<h2>Welcome!</h2>
 				</div>
 				<form onSubmit={e => handleSubmit(e)}>
 					<div className="form-group text-center">
-						<label>Email address</label>
+						<label className="email">Email address</label>
 						<input
 							type="email"
 							className="form-control"
@@ -53,7 +53,7 @@ const Login = () => {
 						/>
 					</div>
 					<div className="form-group text-center">
-						<label>Password</label>
+						<label className="pass">Password</label>
 						<input
 							type="password"
 							className="form-control"
