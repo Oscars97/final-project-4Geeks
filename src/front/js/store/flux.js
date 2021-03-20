@@ -2,6 +2,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			users: [],
+			posts: [],
 			demo: [
 				{
 					title: "FIRST",
@@ -30,6 +31,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.catch(error => console.log("Error loading message from backend", error));
 			},
+
+			getPosts: () => {
+				// fetching data from the backend
+				fetch(process.env.BACKEND_URL + "/api/posts")
+					.then(resp => resp.json())
+					.then(data => {
+						setStore({ posts: data.posts });
+					})
+					.catch(error => console.log("Error loading message from backend", error));
+			},
+
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();

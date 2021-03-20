@@ -6,9 +6,9 @@ class User(db.Model):
     __tablename__ = 'user'
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(120), unique=True, nullable=False)
-    password = db.Column(db.String(80), unique=False, nullable=False)
+    password = db.Column(db.String(200), unique=False, nullable=False)
     username = db.Column(db.String(80), unique=True, nullable=False)
-    profile = db.relationship('Profile', backref='parent',lazy=True)
+    profile = db.relationship('Profile', uselist=False, back_populates="user")
     posts = db.relationship('Post', backref='parent',lazy=True)
 
     def __repr__(self):
@@ -32,8 +32,9 @@ class Profile(db.Model):
     twitter = db.Column(db.String(80), unique=False, nullable=True)
     github = db.Column(db.String(80), unique=False, nullable=True)
     linkedin = db.Column(db.String(80), unique=False, nullable=True)
+    status = db.Column(db.Boolean, unique=False, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
-    
+    user = db.relationship("User", back_populates="profile")
     
     def __repr__(self):
         return '<Profile %r>' % self.name

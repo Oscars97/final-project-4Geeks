@@ -5,10 +5,18 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./pages/home";
 import { Demo } from "./pages/demo";
 import { Single } from "./pages/single";
+import Login from "./pages/login.js";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import Profile from "./component/profile_form";
+import ProfileUser from "./component/perfil";
+
+// asi se importa
+import Register from "./pages/register.js";
+import Feed from "./pages/feed";
+import Animations from "./component/animations";
 
 //create your first component
 const Layout = () => {
@@ -20,7 +28,6 @@ const Layout = () => {
 		<div className="d-flex flex-column h-100">
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
-					<Navbar />
 					<Switch>
 						<Route exact path="/">
 							<Home />
@@ -28,8 +35,28 @@ const Layout = () => {
 						<Route exact path="/demo">
 							<Demo />
 						</Route>
+
 						<Route exact path="/single/:theid">
 							<Single />
+							{/* asi se crea una ruta */}
+						</Route>
+						<Route exact path="/register">
+							<Register />
+						</Route>
+						<Route exact path="/login">
+							<Login />
+						</Route>
+						<Route exact path="/profile_form">
+							<Profile />
+						</Route>
+						<Route exact path="/feed">
+							<Feed />
+						</Route>
+						<Route exact path="/perfil">
+							<ProfileUser />
+						</Route>
+						<Route exact path="/animations">
+							<Animations />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>
