@@ -12,7 +12,6 @@ const profile_form = () => {
 	const [linkedin, setLinkedin] = useState("");
 	const [twitter, setTwitter] = useState("");
 	const [redirect, setRedirect] = useState(false);
-	
 
 	const handleSubmit = e => {
 		e.preventDefault();
@@ -53,7 +52,6 @@ const profile_form = () => {
 
 	return (
 		<div className="profile-form container">
-			
 			<form onSubmit={e => handleSubmit(e)}>
 				<div className="text-center">
 					<img id="imagen" className="" src={logo} />
