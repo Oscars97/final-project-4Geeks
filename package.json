@@ -1,7 +1,7 @@
 {
 	"name": "react-hello-webapp",
 	"engines": {
-		"node": "10.x"
+		"node": "14.x"
 	},
 	"version": "1.0.1",
 	"description": "",
@@ -11,17 +11,21 @@
 		"build": "webpack --config webpack.prod.js"
 	},
 	"author": {
-		"name": "Alejandro Sanchez",
-		"url": "http://alesanchezr.com/"
+		"name": "Oscar Sanchez",
+		"url": "http://github.com/oscars97"
 	},
 	"contributors": [
 		{
-			"name": "Alejandro Sanchez",
-			"url": "http://alesanchezr.com/"
+			"name": "Angie Vargas",
+			"url": "http://github.com/angiegeek"
 		},
 		{
-			"name": "Ignacio Cordoba",
-			"url": "http://github.com/nachovz"
+			"name": "Adriana Bejarano",
+			"url": "http://github.com/AdriBejarano"
+		},
+		{
+			"name": "Ismael Artavia",
+			"url": "http://github.com/IsmaelArtavia"
 		}
 	],
 	"license": "ISC",
