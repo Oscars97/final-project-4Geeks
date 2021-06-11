@@ -6,7 +6,6 @@ import "../../styles/profile.scss";
 
 const Profile = () => {
 	const user_id = sessionStorage.getItem("id_user");
-	console.log(user_id);
 	const [info_user, setInfoUser] = useState({});
 	const [infoGithub, setInfoGithub] = useState({});
 	const [repositories, setRepositories] = useState([]);
@@ -20,29 +19,27 @@ const Profile = () => {
 				getRepositories(data.user.github);
 			})
 			.catch(error => {
-				console.error("Error:", error);
+				return error;
 			});
 
 		const getGithubInfo = username => {
 			fetch(`https://api.github.com/users/${username}`)
 				.then(response => response.json())
 				.then(data => {
-					console.log(data);
 					setInfoGithub(data);
 				})
 				.catch(error => {
-					console.error("Error:", error);
+					return error;
 				});
 		};
 		const getRepositories = username => {
 			fetch(`https://api.github.com/users/${username}/repos?sort=created&per_page=10`)
 				.then(response => response.json())
 				.then(data => {
-					console.log(data);
 					setRepositories(data);
 				})
 				.catch(error => {
-					console.error("Error:", error);
+					return error;
 				});
 		};
 	}, []);

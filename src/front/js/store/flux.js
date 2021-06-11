@@ -29,7 +29,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(data => {
 						setStore({ users: data.users });
 					})
-					.catch(error => console.log("Error loading message from backend", error));
+					.catch(error => {
+						return error;
+					});
 			},
 
 			getPosts: () => {
@@ -39,7 +41,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(data => {
 						setStore({ posts: data.posts });
 					})
-					.catch(error => console.log("Error loading message from backend", error));
+					.catch(error => error);
 			},
 
 			changeColor: (index, color) => {

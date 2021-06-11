@@ -10,7 +10,7 @@ const Feed = () => {
 	const createNewPost = e => {
 		e.preventDefault();
 		if (content === "") {
-			return alert("The post cant be empty");
+			return alert("The post can not be empty");
 		}
 		const data = {
 			content: content,
@@ -25,12 +25,11 @@ const Feed = () => {
 		})
 			.then(response => response.json())
 			.then(data => {
-				console.log("Success:", data);
 				sessionStorage.setItem("username", data.user);
 				window.location.reload();
 			})
 			.catch(error => {
-				console.error("Error:", error);
+				return error;
 			});
 	};
 	return (

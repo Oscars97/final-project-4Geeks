@@ -8,7 +8,6 @@ const Register = () => {
 	const [redirect, setRedirect] = useState(false);
 	const handleSubmit = e => {
 		e.preventDefault();
-		console.log(email, username, password);
 
 		const data = { email: email, username: username, password: password };
 
@@ -19,12 +18,10 @@ const Register = () => {
 		})
 			.then(response => response.json())
 			.then(data => {
-				console.log("Success:", data);
 				setRedirect(true);
 				// setRedirect(true);
 			})
 			.catch(error => {
-				console.error("Error:", error);
 				alert("User with that email already exits");
 			});
 	};

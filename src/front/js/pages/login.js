@@ -11,7 +11,7 @@ const Login = () => {
 	const [profile, setProfile] = useState(false);
 	const handleSubmit = e => {
 		e.preventDefault();
-		console.log(email, password);
+
 		const data = { email: email, password: password };
 		fetch(process.env.BACKEND_URL + "/api/login", {
 			method: "POST",
@@ -22,7 +22,6 @@ const Login = () => {
 		})
 			.then(response => response.json())
 			.then(data => {
-				console.log("Success:", data);
 				if (data.status === 401) {
 					data.profile_status === null ? setRedirect(false) : setProfile(false);
 					alert("Email and password incorrect");
@@ -34,7 +33,6 @@ const Login = () => {
 				// actions.checkLogged();
 			})
 			.catch(error => {
-				console.error("Error:", error);
 				data.profile_status === null ? setRedirect(false) : setProfile(false);
 			});
 	};
